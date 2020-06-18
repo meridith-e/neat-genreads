@@ -3,10 +3,10 @@
 Takes .genomecov files produced by BEDtools genomeCov (with -d option).
 
 ```
-bedtools genomecov 
+bedtools genomecov 			\
 	-d				\
 	-ibam normal.bam		\
-        -g reference.fa             
+        -g reference.fa             	\
 ```
 
 ```
@@ -14,7 +14,7 @@ python computeGC.py			\
         -r reference.fasta         	\
         -i genomecov            	\
         -w [sliding window length]  	\
-        -o /path/to/output
+        -o /path/to/output		\
 ```
 
 The main function in this file processes the inputs (reference.fasta, genome.cov, window length), and outputs a GC count for the sequence in the form of a pickle file at the location and with the name from the path the user provides with the -o command.
@@ -28,7 +28,7 @@ Takes SAM or BAM files and uses console commands for processing:
 ```
 python computeGC.py			\
 	-i path to sam file		\
-	-o path/to/output
+	-o path/to/output		\
 ```
 
 The main function in this file will save a pickle (.p) in the location and with the name from the path the user provides with the -o command.

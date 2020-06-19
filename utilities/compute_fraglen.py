@@ -85,7 +85,7 @@ def count_frags(file: str) -> list:
         if os != 'Windows':
             file_to_parse = pysam.AlignmentFile(file, 'rb')
         else:
-            print("Your machine is running Windows. Please convert any BAM files to SAM files using samtools prior to input")
+            raise Exception("Your machine is running Windows. Please convert any BAM files to SAM files using samtools prior to input")
     else:
         print("Unknown file type, file extension must be bam or sam")
         exit(1)
